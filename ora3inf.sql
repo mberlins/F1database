@@ -4,7 +4,6 @@ FOR EACH ROW
 BEGIN
     UPDATE kierowca z set z.punkty = z.punkty + dbms_random.value(0,25) WHERE id_kierowcy = :new.id_kierowcy;
 END;
--- drop tabele, potem skompiluj trigger, potem execute generator
 
 CREATE OR REPLACE TRIGGER WPLYW
 AFTER INSERT ON SPONSOR
